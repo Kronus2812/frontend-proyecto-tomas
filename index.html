@@ -1,25 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Proyecto Front-End - Tomas Martínez</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TuReseña - Portada</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Mi Proyecto Front-End</h1>
-    <nav>
-      <ul>
-        <li>Inicio</li>
-        <li>Servicios</li>
-        <li>Contacto</li>
-      </ul>
-    </nav>
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="h4 mb-0">TuReseña</h1>
+
+      <form id="search-form" class="d-flex w-50" onsubmit="return false;">
+        <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar película..." aria-label="Buscar">
+        <select id="filter-year" class="form-select w-auto me-2">
+          <option value="">Todos</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+        </select>
+        <button id="clear-btn" class="btn btn-outline-light" type="button">Limpiar</button>
+      </form>
+    </div>
   </header>
 
-  <main>
-    <button class="boton-primario">Aceptar</button>
-    <button class="boton-secundario">Cancelar</button>
+  <main class="container my-4">
+    <section class="mb-4">
+      <h2 class="h5">Principales</h2>
+    </section>
+
+    <section id="movies-grid" class="row g-3">
+    </section>
+
+    <nav aria-label="Paginación ejemplo" class="mt-4">
+      <ul id="pagination" class="pagination justify-content-center">
+      </ul>
+    </nav>
   </main>
+
+<footer>
+  Proyecto: Reseñas de Películas — Convención: 
+  <span>AA1_Martinez_Rodriguez_Santiago_Tomas</span>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
